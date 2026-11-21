@@ -1,0 +1,78 @@
+:root[data-theme='cyberpunk'] {
+  color-scheme: dark;
+  --palette-text: #e9edf1;
+  --palette-page: #0b0e13;
+  --palette-surface: #141920;
+  --palette-muted: #a0aab4;
+  --palette-secondary: #b9c2ca;
+  --palette-heading: #f1f3f5;
+  --palette-primary: #fcee09;
+  --palette-primary-hover: #ffe83d;
+  --palette-border: #333b45;
+  --palette-border-soft: #252c35;
+  --palette-border-strong: #7e7c40;
+  --palette-selection: #23545b;
+  --palette-focus: #50e8ef;
+  --palette-focus-ring: #50e8ef44;
+  --palette-sidebar: #080b10;
+  --palette-sidebar-text: #c4cbd2;
+  --palette-sidebar-muted: #929da8;
+  --palette-sidebar-heading: #f0f2f4;
+  --palette-sidebar-brand: #fcee09;
+  --palette-sidebar-border: #28313a;
+  --palette-sidebar-control: #11171e;
+  --palette-sidebar-hover: #19232c;
+  --palette-sidebar-active: #202b34;
+  --palette-sidebar-marker: #fcee09;
+  --palette-positive-bg: #17251f;
+  --palette-positive-text: #9bd6b1;
+  --palette-positive-border: #294637;
+  --palette-accent: #50e8ef;
+  --palette-hero: #131b21;
+  --palette-hero-border: #273a40;
+  --palette-icon-bg: #1a222a;
+  --palette-icon-text: #50e8ef;
+  --palette-book-back: #28313a;
+  --palette-book-edge: #45515d;
+  --palette-book-front: #10171e;
+  --palette-book-spine: #50e8ef;
+  --palette-book-text: #fcee09;
+  --palette-book-border: #50e8ef55;
+  --palette-shadow-soft: #50e8ef18;
+  --palette-shadow: #fcee0924;
+  --palette-subtle: #1a2027;
+  --palette-warning-bg: #302b18;
+  --palette-warning-text: #f5df68;
+  --palette-warning-border: #554b25;
+  --palette-danger: #ff76c8;
+  --palette-on-primary: #101113;
+  --radius-card: 4px;
+  --radius-control: 3px;
+  --panel-shadow: 0 0 0 1px #fcee0910;
+  --theme-menu-shadow: 0 14px 38px #000000a8;
+}
+
+:root[data-theme='cyberpunk'] .sidebar {
+  border-right: 1px solid #252d36;
+}
+
+:root[data-theme='cyberpunk'] .sidebar::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 138px;
+  background: linear-gradient(#50e8ef, #50e8ef00);
+  content: '';
+  opacity: .7;
+  pointer-events: none;
+}
+
+:root[data-theme='cyberpunk'] .topbar {
+  border-top: 2px solid #fcee09;
+}
+
+:root[data-theme='cyberpunk'] .welcome-panel {
+  background-image: linear-gradient(125deg, #50e8ef0b 1px, transparent 1px), linear-gradient(35deg, #fcee0908 1px, transparent 1px);
+  background-size: 34px 34px, 48px 48px;
+}
