@@ -7,7 +7,7 @@ import { appConfig } from './src/config/app'
 import { buildThemeBootstrapScript } from './src/core/themeBootstrap'
 
 function courseMaterialHeadersPlugin(): Plugin {
-  const attach = (middlewares: { use: (handler: (req: { url?: string }, res: import('node:http').ServerResponse, next: () => void) => void) => void }, publicDir: string | false) => {
+  const attach = (middlewares: { use: (handler: (req: { url?: string }, res: import('node:http').ServerResponse, next: () => void) => void) => void }, publicDir: string | false, base: string) => {
     middlewares.use((req, res, next) => {
       let pathname: string
       try {
@@ -16,13 +16,15 @@ function courseMaterialHeadersPlugin(): Plugin {
         next()
         return
       }
-      const assetPath = publicDir ? resolve(publicDir, `.${pathname}`) : ''
+      const basePath = base === '/' ? '' : base.replace(/\/$/, '')
+      const assetUrlPath = basePath && pathname.startsWith(`${basePath}/`) ? pathname.slice(basePath.length) : pathname
+      const assetPath = publicDir ? resolve(publicDir, `.${assetUrlPath}`) : ''
       const assetRelativePath = publicDir && assetPath ? relative(publicDir, assetPath) : '..'
       const isPublicAsset = Boolean(publicDir && assetRelativePath && !assetRelativePath.startsWith('..') && existsSync(assetPath))
-      const normalizedPath = pathname.toLowerCase()
-      const contentType = isPublicAsset && normalizedPath.startsWith('/course-materials/') && normalizedPath.endsWith('.pptx')
+      const assetUrlLower = assetUrlPath.toLowerCase()
+      const contentType = isPublicAsset && assetUrlLower.startsWith('/course-materials/') && assetUrlLower.endsWith('.pptx')
         ? 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-        : isPublicAsset && normalizedPath.startsWith('/course-materials/') && normalizedPath.endsWith('.pdf') ? 'application/pdf' : undefined
+        : isPublicAsset && assetUrlLower.startsWith('/course-materials/') && assetUrlLower.endsWith('.pdf') ? 'application/pdf' : undefined
 
       if (contentType) {
         const headers = {
@@ -57,10 +59,10 @@ function courseMaterialHeadersPlugin(): Plugin {
   return {
     name: 'course-material-response-headers',
     configureServer(server) {
-      attach(server.middlewares, server.config.publicDir)
+      attach(server.middlewares, server.config.publicDir, server.config.base)
     },
     configurePreviewServer(server) {
-      attach(server.middlewares, server.config.publicDir)
+      attach(server.middlewares, server.config.publicDir, server.config.base)
     },
   }
 }
@@ -79,8 +81,9 @@ function appMetadataPlugin(): Plugin {
   }
 }
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/Constitution-Study/' : '/',
   plugins: [react(), appMetadataPlugin(), courseMaterialHeadersPlugin()],
   server: { port: 5173, strictPort: true },
   preview: { port: 4173, strictPort: true },
-})
+}))

@@ -21,7 +21,7 @@ pnpm build
 pnpm preview
 ```
 
-生产构建输出到 `dist/`。项目使用 HashRouter，无需额外配置 SPA 路由回退。
+生产构建输出到 `dist/`。开发地址保持在根路径；生产预览使用 Pages 子路径 `http://127.0.0.1:4173/Constitution-Study/`。项目使用 HashRouter，无需额外配置 SPA 路由回退。
 
 ## 项目结构
 
@@ -47,28 +47,25 @@ source-materials/        原始 PPT，本地留存，不提交到仓库
 
 `src/subjects/constitution/lectures.ts` 统一维护讲次、原始课件和 PDF 预览 URL。部署需要包含 `public/course-materials/` 中的 PPT 与 `public/course-materials/pdf/` 中对应的 PDF。来源页码仍指向原始 PPT 幻灯片。
 
-PPT 和 PDF 由开发、预览及 Vercel 配置返回内嵌响应头。浏览器能否原生展示 PPT 取决于浏览器本身；PDF 是在线预览首选。页面另提供原始 PPT 下载入口。不要使用 Office Online Viewer 转发需身份验证的课程资料。
+PPT 和 PDF 由本地开发、预览配置返回内嵌响应头。浏览器能否原生展示 PPT 取决于浏览器本身；PDF 是在线预览首选。页面另提供原始 PPT 下载入口。
 
-## 私人 Vercel 部署
+## GitHub Pages 发布
 
-GitHub 仓库应设为 **Private**。这与线上访问保护相互独立：Vercel 项目必须启用 **Vercel Authentication**，Deployment Protection 范围设为 **All Deployments**，覆盖生产、预览及自动生成的部署 URL。只保留个人 Vercel 账号访问，不邀请其他成员、不创建 Shareable Links、不开放绕过保护的入口。
+网站发布地址为 [https://cyzireael.github.io/Constitution-Study/](https://cyzireael.github.io/Constitution-Study/)。
 
-Vercel 建议设置：
+GitHub Pages 是公开静态网站，不提供本项目的个人身份验证。任何人都可能访问网页、查看公开仓库源码及提交历史、下载 `public/course-materials/` 中的 PPT 和 PDF。仓库改为 Public 后，网页与课件都不应视作私人内容；提交历史中的作者姓名和邮箱也可能公开。
 
-- Framework Preset：Vite
-- Install Command：`pnpm install --frozen-lockfile`
-- Build Command：`pnpm build`
-- Output Directory：`dist`
+仓库 Settings > Pages 的发布来源需设为 **GitHub Actions**。`.github/workflows/pages.yml` 在推送 `main` 或手动触发时，使用 `package.json` 中固定的 pnpm 版本安装依赖、运行类型检查和生产构建，并发布 `dist/`。生产构建使用 `/Constitution-Study/` 子路径，开发服务器仍使用 `/`；应用继续使用 HashRouter，无需 SPA 路由回退。
 
-验证保护时，除首页外，还应使用未认证浏览器直接请求 `/course-materials/lecture-01.pptx.pptx` 和 `/course-materials/pdf/lecture-01.pdf` 等静态资源 URL，确认返回登录/保护页面而不是课件文件。不要启用 Office Online Viewer，因为它无法读取受保护资源，也会把资料交给第三方预览服务。
+首次发布前，在 GitHub 仓库 Settings > Pages 中选择 **GitHub Actions**。工作流部署成功后，可在以上网址访问网站。PDF 与 PPT 是公开静态文件，可直接从该网站访问和下载。
 
-`vercel.json` 为 PPT/PDF 指定 MIME 类型、`Content-Disposition: inline` 和 `Cache-Control: private, no-store`。静态资源仍依赖 Vercel Deployment Protection 提供身份验证；响应头本身不是访问控制。
+GitHub Pages 只托管静态文件，不提供服务器端身份认证、云数据库或跨设备 LocalStorage 同步。不要在公开部署中存放秘密、私人笔记、凭据或未获准公开的课程材料。
 
 ## GitHub 文件策略
 
-提交应用源码、课程 JSON、`public/course-materials/`、锁文件、构建配置和部署配置。`.gitignore` 排除 `node_modules/`、构建产物、环境变量、备份和 `source-materials/` 原始材料。仓库必须保持 Private；即便如此，课程资料副本仍属于私人学习材料，应避免复制到公共仓库或第三方服务。
+提交应用源码、课程 JSON、`public/course-materials/`、锁文件、构建配置和部署配置。`.gitignore` 排除 `node_modules/`、构建产物、环境变量、备份和 `source-materials/` 原始材料。网站运行需要的课件副本和 PDF 会随仓库公开。
 
-不要提交 `.env`、真实密钥、个人配置、日志、缓存或 `backups/`。当前项目无需部署密钥或运行时环境变量。
+不要提交 `.env`、真实密钥、个人凭据、日志、缓存或 `backups/`。当前项目无需部署密钥或运行时环境变量。
 
 ## 页面
 
