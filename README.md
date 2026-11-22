@@ -6,7 +6,7 @@
 
 ## 本地运行
 
-环境要求：Node.js 22.12 或更高版本、pnpm 11。
+环境要求：Node.js 22.13.0 或更高版本、pnpm 11。
 
 ```powershell
 pnpm install
