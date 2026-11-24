@@ -1,5 +1,7 @@
 import type { CourseContent } from '../content/types'
 import { constitutionSubject } from '../subjects/constitution/config'
+import { chineseLawHistorySubject } from '../subjects/chinese-law-history/config'
+import { legalProfessionalEthicsSubject } from '../subjects/legal-professional-ethics/config'
 
 export interface SubjectConfig {
   subjectId: string
@@ -23,6 +25,8 @@ const notAdded = (subjectId: string, name: string, description: string, exercise
 
 export const subjects: SubjectConfig[] = [
   constitutionSubject,
+  chineseLawHistorySubject,
+  legalProfessionalEthicsSubject,
   notAdded('jurisprudence', '法理学', '待添加课程资料。'),
   notAdded('criminal-law', '刑法学', '待添加课程资料。', ['选择题', '判断题', '简答题', '案例分析']),
   notAdded('civil-law', '民法学', '待添加课程资料。'),

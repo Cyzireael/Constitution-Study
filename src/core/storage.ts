@@ -5,7 +5,21 @@ export const storageKeys = {
   migrationComplete: 'law-study-platform.migration.v1.complete',
 } as const
 
-export type SubjectRecordType = 'knowledge-content' | 'knowledge-review' | 'exercises' | 'subjective' | 'wrong-questions' | 'favorites' | 'progress'
+export type SubjectRecordType = 'knowledge-content' | 'knowledge-review' | 'knowledge-additions' | 'knowledge-modules' | 'exercises' | 'subjective' | 'wrong-questions' | 'favorites' | 'progress'
+
+// Preserve the raw snapshot so callers can detect corrupt data and concurrent edits.
+export function readSubjectRecord(subjectId: string, recordType: SubjectRecordType): { raw: string | null; value: unknown; error?: string } {
+  try {
+    const raw = window.localStorage.getItem(subjectStorageKey(subjectId, recordType))
+    try {
+      return { raw, value: raw === null ? null : JSON.parse(raw) }
+    } catch {
+      return { raw, value: null, error: '本地数据不是有效的 JSON，原始记录已保留。' }
+    }
+  } catch {
+    return { raw: null, value: null, error: '浏览器存储不可用，请检查存储权限。' }
+  }
+}
 
 export function subjectStorageKey(subjectId: string, recordType: SubjectRecordType | string) {
   return `law-study-platform.subject.${subjectId}.${recordType}.v1`

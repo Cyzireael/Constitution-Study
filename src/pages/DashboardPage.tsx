@@ -2,6 +2,7 @@ import { ArrowRight, BookOpen, Check, FileText, Library, NotebookPen, PenLine, Q
 import { Link } from 'react-router-dom'
 import { PageHeading } from '../components/PageHeading'
 import { useSubject } from '../core/SubjectContext'
+import { loadKnowledgeAdditions } from '../lib/knowledgeAdditions'
 
 const studyEntries = [
   { path: '/knowledge', icon: Library, number: '01', title: '知识点库', english: 'KNOWLEDGE LIBRARY', description: '梳理课程脉络，回到每一个知识点的原始出处。', label: '浏览知识点' },
@@ -12,6 +13,7 @@ const studyEntries = [
 export function DashboardPage() {
   const { subject } = useSubject()
   const course = subject.courseData!
+  const knowledgeCount = course.knowledgePoints.length + loadKnowledgeAdditions(subject.subjectId).points.length
   return (
     <>
       <PageHeading english="YOUR PERSONAL STUDY DESK" title="学习，从这里开始。" description="整理知识，循序练习，让复习更有条理。" />
@@ -40,7 +42,7 @@ export function DashboardPage() {
         ))}</div>
       </section>
       <section className="dashboard-bottom" aria-label="资料与学习说明">
-        <article className="material-panel"><div className="section-heading"><h2 className="section-title">课程资料</h2><span className="muted-tag">{course.knowledgePoints.length ? '已整理第一讲' : '等待整理'}</span></div><div className="material-empty"><span className="document-icon"><FileText size={25} strokeWidth={1.3} /></span><div><h3>{course.knowledgePoints.length ? `${subject.name} · 第一讲` : '还没有课程资料'}</h3><p>{course.knowledgePoints.length ? `已整理 ${course.knowledgePoints.length} 条课程知识点。` : '提供老师的 PPT 和课堂笔记后，即可开始整理课程内容。'}<br />目前题库内容仍为空。</p></div></div></article>
+          <article className="material-panel"><div className="section-heading"><h2 className="section-title">课程资料</h2><span className="muted-tag">{knowledgeCount ? (subject.subjectId === 'constitution' ? '课程已整理' : '笔记已整理') : '等待整理'}</span></div><div className="material-empty"><span className="document-icon"><FileText size={25} strokeWidth={1.3} /></span><div><h3>{knowledgeCount ? `${subject.name}知识点库` : '还没有课程资料'}</h3><p>{knowledgeCount ? `已整理 ${knowledgeCount} 条课程知识点。` : '提供老师的课程资料或个人笔记后，即可开始整理课程内容。'}<br />目前题库内容仍为空。</p></div></div></article>
         <article className="principle-panel"><Quote size={20} strokeWidth={1.5} /><h2>有来源，才有依据。</h2><p>忠于课程资料，保留原始出处；<br />对未覆盖的问题，明确标注。</p><span><Check size={14} />不生成未经资料支持的课程内容</span></article>
       </section>
     </>

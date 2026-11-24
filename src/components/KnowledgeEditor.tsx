@@ -21,6 +21,7 @@ export interface KnowledgeEditorDraft {
   explanation: string
   sourceFile: string
   sourcePages: string
+  sourceLocation: string
   contentMode: 'simple' | 'structured'
   blocks: KnowledgeEditorBlock[]
 }
@@ -34,11 +35,12 @@ interface KnowledgeEditorProps {
   onChange: (draft: KnowledgeEditorDraft) => void
   onSave: () => void
   onCancel: () => void
+  notesSource?: boolean
 }
 
 const contentTypes = Object.entries(contentTypeLabels) as [KnowledgeContentType, string][]
 
-export function KnowledgeEditor({ draft, chapters, lectures, error, saving, onChange, onSave, onCancel }: KnowledgeEditorProps) {
+export function KnowledgeEditor({ draft, chapters, lectures, error, saving, onChange, onSave, onCancel, notesSource = false }: KnowledgeEditorProps) {
   const update = (patch: Partial<KnowledgeEditorDraft>) => onChange({ ...draft, ...patch })
   const updateBlock = (index: number, patch: Partial<KnowledgeEditorBlock>) => {
     update({ blocks: draft.blocks.map((block, blockIndex) => blockIndex === index ? { ...block, ...patch } : block) })
@@ -66,7 +68,7 @@ export function KnowledgeEditor({ draft, chapters, lectures, error, saving, onCh
 
       <fieldset className="editor-fieldset">
         <legend>基本信息</legend>
-        <label className="editor-field"><span>所属讲次</span><select required value={draft.lectureId} onChange={(event) => {
+        <label className="editor-field"><span>{notesSource ? '笔记分类单元（未按讲次划分）' : '所属讲次'}</span><select required value={draft.lectureId} onChange={(event) => {
           const lecture = lectures.find((item) => item.lectureId === event.target.value)
           if (lecture) {
             const matchingChapter = chapters.find((chapter) => chapter.lectureId === lecture.lectureId && chapter.title === draft.chapter)
@@ -118,7 +120,9 @@ export function KnowledgeEditor({ draft, chapters, lectures, error, saving, onCh
       <fieldset className="editor-fieldset">
         <legend>资料来源</legend>
         <label className="editor-field"><span>来源文件</span><input required value={draft.sourceFile} onChange={(event) => update({ sourceFile: event.target.value })} /></label>
-        <label className="editor-field"><span>PPT 页码</span><input required inputMode="numeric" placeholder="例如：3, 4, 5" value={draft.sourcePages} onChange={(event) => update({ sourcePages: event.target.value })} /><small>多个页码以逗号或顿号分隔。</small></label>
+        {notesSource
+          ? <label className="editor-field"><span>笔记标题路径</span><textarea required rows={3} value={draft.sourceLocation} onChange={(event) => update({ sourceLocation: event.target.value })} /><small>用于定位 Word 笔记中的原始标题层级。</small></label>
+          : <label className="editor-field"><span>PPT 页码</span><input required inputMode="numeric" placeholder="例如：3, 4, 5" value={draft.sourcePages} onChange={(event) => update({ sourcePages: event.target.value })} /><small>多个页码以逗号或顿号分隔。</small></label>}
       </fieldset>
 
       {error && <p className="editor-error" role="alert">{error}</p>}

@@ -10,6 +10,7 @@ export interface KnowledgeContentSection {
 
 export interface KnowledgePoint {
   id: string
+  subjectId?: string
   lectureId: string
   lectureTitle: string
   title: string
@@ -21,6 +22,7 @@ export interface KnowledgePoint {
   source: {
     file: string
     pages: number[]
+    location?: string
   }
   verificationStatus: VerificationStatus
 }
