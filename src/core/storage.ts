@@ -5,7 +5,7 @@ export const storageKeys = {
   migrationComplete: 'law-study-platform.migration.v1.complete',
 } as const
 
-export type SubjectRecordType = 'knowledge-content' | 'knowledge-review' | 'knowledge-additions' | 'knowledge-modules' | 'exercises' | 'subjective' | 'wrong-questions' | 'favorites' | 'progress'
+export type SubjectRecordType = 'knowledge-content' | 'knowledge-review' | 'knowledge-additions' | 'knowledge-modules' | 'exercise-progress' | 'wrong-questions' | 'subjective' | 'favorites' | 'progress'
 
 // Preserve the raw snapshot so callers can detect corrupt data and concurrent edits.
 export function readSubjectRecord(subjectId: string, recordType: SubjectRecordType): { raw: string | null; value: unknown; error?: string } {

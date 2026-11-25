@@ -1,6 +1,8 @@
 import courseData from './course.json'
 import additionalLectureData from './lectures-02-07.json'
 import additionalLectureDetails from './lectures-02-06-additional.json'
+import exerciseBank from './exercises.json'
+import subjectiveQuestionBank from './subjective-questions.json'
 import type { CourseContent } from '../../content/types'
 import type { SubjectConfig } from '../../core/subjects'
 import { constitutionLectures } from './lectures'
@@ -9,6 +11,8 @@ import { constitutionChapterByKnowledgePointId } from './chapters'
 const originalCourse = courseData as unknown as CourseContent
 const additionalCourse = additionalLectureData as unknown as CourseContent
 const additionalLectureDetailCourse = additionalLectureDetails as unknown as CourseContent
+const exerciseData = exerciseBank as CourseContent['exercises']
+const subjectiveQuestionData = subjectiveQuestionBank as CourseContent['subjectiveQuestions']
 const firstLecture = constitutionLectures[0]
 const sourceKnowledgePoints = [
   ...originalCourse.knowledgePoints.map((point) => ({
@@ -26,6 +30,8 @@ export const constitutionLegacyChapterByKnowledgePointId = Object.fromEntries(
 
 const combinedCourse: CourseContent = {
   ...originalCourse,
+  exercises: exerciseData,
+  subjectiveQuestions: subjectiveQuestionData,
   knowledgePoints: sourceKnowledgePoints.map((point) => {
     const chapter = constitutionChapterByKnowledgePointId[point.id]
     return chapter
@@ -41,5 +47,5 @@ export const constitutionSubject: SubjectConfig = {
   enabled: true,
   courseData: combinedCourse,
   courseDataPath: 'src/subjects/constitution/course.json + lectures-02-07.json',
-  exerciseTypes: ['选择题', '判断题', '简答题', '论述题', '案例分析'],
+  exerciseTypes: ['单项选择题', '多项选择题', '简答题', '论述题', '材料分析题'],
 }

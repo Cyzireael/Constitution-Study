@@ -1,0 +1,12 @@
+[
+  {"id":"CON-SQ-001","chapterId":"L06-PRINCIPLES","chapterTitle":"第六讲｜宪法的指导思想和基本原则","type":"简答题","knowledgePointIds":["L06-PRINCIPLE-002","L06-PRINCIPLE-005","L06-PRINCIPLE-006","L06-PRINCIPLE-007"],"prompt":"结合课程所学，简述宪法基本原则的主要内容。"},
+  {"id":"CON-SQ-002","chapterId":"L07-TYPES","chapterTitle":"第七讲｜基本权利和义务概述","type":"简答题","knowledgePointIds":["L07-TYPES-002","L01-STATUS-013"],"prompt":"结合课程对基本权利分类及相关案例材料的介绍，简述平等权在课程知识结构中的位置。"},
+  {"id":"CON-SQ-003","chapterId":"L04-INTERPRETATION-TYPES","chapterTitle":"第四讲｜宪法解释","type":"简答题","knowledgePointIds":["L04-INTERP-006","L04-INTERP-007"],"prompt":"简述课程所列宪法解释的主要分类维度、解释尺度和解释方法。"},
+  {"id":"CON-SQ-004","chapterId":"L07-GUARANTEES-LIMITS","chapterTitle":"第七讲｜基本权利的保障与界限","type":"简答题","knowledgePointIds":["L07-LIMIT-001","L07-LIMIT-002","L07-LIMIT-003"],"prompt":"简述课程介绍的基本权利限制问题及其审查材料。"},
+  {"id":"CON-SQ-005","chapterId":"L07-RIGHTS","chapterTitle":"第七讲｜基本权利和义务概述","type":"简答题","knowledgePointIds":["L07-RIGHTS-002"],"prompt":"结合课程关于道德权利、法律权利和权利理论的材料，说明表达自由在课程中的讨论位置。"},
+  {"id":"CON-SQ-006","chapterId":"L05-DEVELOPMENT","chapterTitle":"第五讲｜近代宪法的产生与发展","type":"论述题","knowledgePointIds":["L05-DEV-003","L05-DEV-004","L05-DEV-005"],"prompt":"结合课程材料，论述近代宪法与现代宪法在财产权、经济自由和社会权保障方面的区别与联系。"},
+  {"id":"CON-SQ-007","chapterId":"L06-PRINCIPLES","chapterTitle":"第六讲｜宪法的指导思想和基本原则","type":"论述题","knowledgePointIds":["L06-PRINCIPLE-002","L06-PRINCIPLE-005","L06-PRINCIPLE-006","L06-PRINCIPLE-007"],"prompt":"结合课程关于人民主权、人权、法治和权力监督与制约的材料，论述宪法基本原则之间的联系。"},
+  {"id":"CON-SQ-008","chapterId":"L07-GUARANTEES-LIMITS","chapterTitle":"第七讲｜基本权利的保障与界限","type":"材料分析题","knowledgePointIds":["L07-RIGHTS-002","L07-LIMIT-001","L07-LIMIT-002","L07-LIMIT-003"],"material":"某市制定一项管理规定，要求所有举办公共集会的组织者事先取得行政许可。申请人认为，该规定对表达和集会活动设置了过宽限制；制定机关则主张，该措施服务于公共秩序管理。","prompt":"请结合课程所学，分析材料涉及的基本权利限制问题，并讨论限制主体、依据、目的、手段及限度。"},
+  {"id":"CON-SQ-009","chapterId":"L04-INTERPRETATION-TYPES","chapterTitle":"第四讲｜宪法解释","type":"材料分析题","knowledgePointIds":["L04-INTERP-001","L04-INTERP-006","L04-INTERP-007","L04-INTERP-008","L04-APPLY-001"],"material":"某项法律条文对“公共场所”的范围没有作出明确界定。行政机关、法院和当事人对该词是否包括某类新型公共空间存在不同理解。争议进入诉讼后，审理机关需要判断该法律规定与宪法有关权利保障的要求是否协调。","prompt":"请结合课程所学，分析宪法解释的概念、解释方法和解释原则，并说明宪法解释与宪法适用的关系。"},
+  {"id":"CON-SQ-010","chapterId":"L07-RIGHTS","chapterTitle":"第七讲｜基本权利和义务概述","type":"材料分析题","knowledgePointIds":["L01-INTRO-006","L01-INTRO-007","L07-RIGHTS-006","L07-LIMIT-003"],"material":"某项公共安全方案拟在极端紧急情况下采取措施，可能显著降低一部分人的生命安全风险，但同时会使另一部分人面临严重且不可逆的生命危险。方案支持者主张应以保护人数更多者为优先；反对者主张不能把具体个人仅作为实现公共安全目标的工具。","prompt":"请结合课程关于人的尊严、基本权利限制和比例原则的材料，分析该方案涉及的宪法问题。"}
+]

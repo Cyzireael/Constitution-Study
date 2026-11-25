@@ -1,0 +1,581 @@
+{
+  "format": "law-study-platform-constitution-question-coverage",
+  "version": 1,
+  "subjectId": "constitution",
+  "summary": {
+    "knowledgePoints": 122,
+    "objectiveQuestions": 45,
+    "subjectiveQuestions": 10,
+    "coveredByObjective": 51,
+    "coveredBySubjective": 21,
+    "coveredByEither": 60,
+    "uncovered": 62
+  },
+  "lectures": [
+    {
+      "lectureId": "L01",
+      "lectureTitle": "第一讲｜宪法学",
+      "knowledgePointCount": 41,
+      "coveredCount": 16,
+      "uncoveredCount": 25,
+      "covered": [
+        {
+          "id": "L01-INTRO-002",
+          "title": "中国宪法的目录结构"
+        },
+        {
+          "id": "L01-INTRO-003",
+          "title": "宪法作用的三个观察面向"
+        },
+        {
+          "id": "L01-INTRO-005",
+          "title": "我国宪法序言对宪法地位与职责的表述"
+        },
+        {
+          "id": "L01-INTRO-006",
+          "title": "人的尊严与宪法保障"
+        },
+        {
+          "id": "L01-INTRO-007",
+          "title": "击落航空器案：人的生命不能被工具化"
+        },
+        {
+          "id": "L01-INTRO-008",
+          "title": "基本权利不受选票控制"
+        },
+        {
+          "id": "L01-INTRO-010",
+          "title": "学习宪法的路径"
+        },
+        {
+          "id": "L01-CONCEPT-010",
+          "title": "立宪主义意义的宪法"
+        },
+        {
+          "id": "L01-CONCEPT-012",
+          "title": "根本法意义的宪法"
+        },
+        {
+          "id": "L01-STATUS-001",
+          "title": "宪法与普通法律的共性及法律的两个维度"
+        },
+        {
+          "id": "L01-STATUS-003",
+          "title": "拉德布鲁赫公式"
+        },
+        {
+          "id": "L01-STATUS-005",
+          "title": "并非所有宪法都具有根本法意义"
+        },
+        {
+          "id": "L01-STATUS-007",
+          "title": "宪法制定程序较为严格"
+        },
+        {
+          "id": "L01-STATUS-008",
+          "title": "宪法修改议案的提出主体"
+        },
+        {
+          "id": "L01-STATUS-009",
+          "title": "宪法修改通过程序的要求"
+        },
+        {
+          "id": "L01-STATUS-013",
+          "title": "与宪法相抵触的一般法律规定无效"
+        }
+      ],
+      "uncovered": [
+        {
+          "id": "L01-INTRO-001",
+          "title": "宪法与国家：国—家—法"
+        },
+        {
+          "id": "L01-INTRO-004",
+          "title": "宪法与国家的形成"
+        },
+        {
+          "id": "L01-INTRO-012",
+          "title": "宪法与国家认同"
+        },
+        {
+          "id": "L01-INTRO-011",
+          "title": "宪法在法律体系中的位阶"
+        },
+        {
+          "id": "L01-INTRO-009",
+          "title": "宪法作为最后的保障"
+        },
+        {
+          "id": "L01-CONCEPT-002",
+          "title": "中国古代“宪法”用语"
+        },
+        {
+          "id": "L01-CONCEPT-003",
+          "title": "constitution 传入日本与中国"
+        },
+        {
+          "id": "L01-CONCEPT-004",
+          "title": "constitution 的词源含义"
+        },
+        {
+          "id": "L01-CONCEPT-005",
+          "title": "罗马、中世纪与英国早期 constitution 用法"
+        },
+        {
+          "id": "L01-CONCEPT-006",
+          "title": "英国资产阶级革命与亚里士多德的宪法观"
+        },
+        {
+          "id": "L01-CONCEPT-007",
+          "title": "近代宪法与古代宪法的区别和联系"
+        },
+        {
+          "id": "L01-CONCEPT-008",
+          "title": "课件中的历史阶段划分注解"
+        },
+        {
+          "id": "L01-CONCEPT-009",
+          "title": "原始意义的宪法：国家组织法"
+        },
+        {
+          "id": "L01-CONCEPT-011",
+          "title": "部门法意义的宪法"
+        },
+        {
+          "id": "L01-CONCEPT-013",
+          "title": "宪法最高地位的文本例证"
+        },
+        {
+          "id": "L01-STATUS-002",
+          "title": "“恶法亦法？”课件案例"
+        },
+        {
+          "id": "L01-STATUS-004",
+          "title": "课件所引不同法律规范文本"
+        },
+        {
+          "id": "L01-STATUS-006",
+          "title": "宪法规定国家最根本性问题"
+        },
+        {
+          "id": "L01-STATUS-010",
+          "title": "课件所载日本修宪事件材料"
+        },
+        {
+          "id": "L01-STATUS-011",
+          "title": "宪法的部分内容不得修改"
+        },
+        {
+          "id": "L01-STATUS-012",
+          "title": "宪法具有最高法律效力"
+        },
+        {
+          "id": "L01-STATUS-014",
+          "title": "宪法法律地位小结"
+        },
+        {
+          "id": "L01-ESSENCE-001",
+          "title": "教材所列宪法本质观点"
+        },
+        {
+          "id": "L01-ESSENCE-002",
+          "title": "宪法本质图示：尊严、人权与有限政府"
+        },
+        {
+          "id": "L01-ESSENCE-003",
+          "title": "宪法与国家存在、人的尊严和基本权利"
+        }
+      ]
+    },
+    {
+      "lectureId": "L02",
+      "lectureTitle": "第二讲｜宪法的分类和渊源",
+      "knowledgePointCount": 15,
+      "coveredCount": 12,
+      "uncoveredCount": 3,
+      "covered": [
+        {
+          "id": "L02-CLASS-001",
+          "title": "成文宪法与不成文宪法"
+        },
+        {
+          "id": "L02-CLASS-002",
+          "title": "刚性宪法与柔性宪法"
+        },
+        {
+          "id": "L02-SOURCE-001",
+          "title": "宪法渊源的含义与宪法典"
+        },
+        {
+          "id": "L02-SOURCE-002",
+          "title": "宪法性法律"
+        },
+        {
+          "id": "L02-SOURCE-003",
+          "title": "宪法惯例的概念与效力"
+        },
+        {
+          "id": "L02-SOURCE-004",
+          "title": "宪法惯例的法律属性争议与比较材料"
+        },
+        {
+          "id": "L02-SOURCE-005",
+          "title": "宪法判例"
+        },
+        {
+          "id": "L02-SOURCE-006",
+          "title": "宪法解释作为宪法渊源"
+        },
+        {
+          "id": "L02-SOURCE-007",
+          "title": "国际条约与宪法"
+        },
+        {
+          "id": "L02-SOURCE-008",
+          "title": "我国宪法渊源与合宪性审查依据"
+        },
+        {
+          "id": "L02-CONST-001",
+          "title": "宪政的概念"
+        },
+        {
+          "id": "L02-CONST-002",
+          "title": "苏格拉底之死与宪政、民主问题"
+        }
+      ],
+      "uncovered": [
+        {
+          "id": "L02-CLASS-003",
+          "title": "钦定宪法、民定宪法与协定宪法"
+        },
+        {
+          "id": "L02-CLASS-004",
+          "title": "资本主义类型宪法与社会主义类型宪法"
+        },
+        {
+          "id": "L02-CLASS-005",
+          "title": "近代宪法与现代宪法"
+        }
+      ]
+    },
+    {
+      "lectureId": "L03",
+      "lectureTitle": "第三讲｜宪法制定与宪法修改",
+      "knowledgePointCount": 9,
+      "coveredCount": 5,
+      "uncoveredCount": 4,
+      "covered": [
+        {
+          "id": "L03-FOUND-003",
+          "title": "《五月花号公约》与美国制宪材料"
+        },
+        {
+          "id": "L03-FOUND-004",
+          "title": "制宪程序与1954年宪法制定"
+        },
+        {
+          "id": "L03-AMEND-001",
+          "title": "宪法修改的含义、必要性与限制理论"
+        },
+        {
+          "id": "L03-AMEND-003",
+          "title": "宪法修改程序"
+        },
+        {
+          "id": "L03-FOUND-006",
+          "title": "美国第一部成文宪法的制定"
+        }
+      ],
+      "uncovered": [
+        {
+          "id": "L03-FOUND-001",
+          "title": "宪法制定与制宪权"
+        },
+        {
+          "id": "L03-FOUND-002",
+          "title": "课件列举的制宪权理论观点"
+        },
+        {
+          "id": "L03-FOUND-005",
+          "title": "课件所述宪法实施历史材料"
+        },
+        {
+          "id": "L03-AMEND-002",
+          "title": "全面修改与部分修改"
+        }
+      ]
+    },
+    {
+      "lectureId": "L04",
+      "lectureTitle": "第四讲｜宪法解释",
+      "knowledgePointCount": 10,
+      "coveredCount": 5,
+      "uncoveredCount": 5,
+      "covered": [
+        {
+          "id": "L04-INTERP-001",
+          "title": "宪法解释的概念与解释问题"
+        },
+        {
+          "id": "L04-INTERP-006",
+          "title": "宪法解释的分类、合宪性解释与案例"
+        },
+        {
+          "id": "L04-INTERP-007",
+          "title": "宪法解释的尺度与方法"
+        },
+        {
+          "id": "L04-INTERP-008",
+          "title": "宪法解释原则与我国宪法解释"
+        },
+        {
+          "id": "L04-APPLY-001",
+          "title": "宪法适用与宪法司法适用"
+        }
+      ],
+      "uncovered": [
+        {
+          "id": "L04-INTERP-002",
+          "title": "陕西西安黄碟案与住宅、隐私问题"
+        },
+        {
+          "id": "L04-INTERP-003",
+          "title": "课件所列美国与日本淫秽物品界定材料"
+        },
+        {
+          "id": "L04-INTERP-004",
+          "title": "格里斯沃尔德诉康涅狄格州案与伴影理论"
+        },
+        {
+          "id": "L04-INTERP-005",
+          "title": "宪法解释的作用与解释机关体制"
+        },
+        {
+          "id": "L04-INTERP-009",
+          "title": "社会学意义解释：Bradwell诉伊利诺伊州案"
+        }
+      ]
+    },
+    {
+      "lectureId": "L05",
+      "lectureTitle": "第五讲｜近代宪法的产生与发展、国家形式",
+      "knowledgePointCount": 16,
+      "coveredCount": 8,
+      "uncoveredCount": 8,
+      "covered": [
+        {
+          "id": "L05-ORIGIN-001",
+          "title": "近代宪法产生的条件与国家脉络"
+        },
+        {
+          "id": "L05-FORM-001",
+          "title": "政权组织形式与亚里士多德政体分类"
+        },
+        {
+          "id": "L05-FORM-002",
+          "title": "资本主义国家政权组织形式"
+        },
+        {
+          "id": "L05-FORM-003",
+          "title": "人民代表大会制度"
+        },
+        {
+          "id": "L05-FORM-004",
+          "title": "国家结构形式、行政区划与变更程序"
+        },
+        {
+          "id": "L05-DEV-003",
+          "title": "现代市民宪法与社会国家理念"
+        },
+        {
+          "id": "L05-DEV-004",
+          "title": "现代宪法中的参政权与传统人权保障"
+        },
+        {
+          "id": "L05-DEV-005",
+          "title": "议会制民主主义与现代宪法权力结构"
+        }
+      ],
+      "uncovered": [
+        {
+          "id": "L05-ORIGIN-002",
+          "title": "中世纪封主封臣关系与法律契约"
+        },
+        {
+          "id": "L05-ORIGIN-003",
+          "title": "1215年《大宪章》及其意义"
+        },
+        {
+          "id": "L05-ORIGIN-004",
+          "title": "光荣革命与《权利法案》"
+        },
+        {
+          "id": "L05-ORIGIN-005",
+          "title": "社会契约论与宪法"
+        },
+        {
+          "id": "L05-ORIGIN-006",
+          "title": "从章程观念到美国独立宣言"
+        },
+        {
+          "id": "L05-ORIGIN-007",
+          "title": "美国立宪过程与政治多元主义"
+        },
+        {
+          "id": "L05-DEV-001",
+          "title": "课件所述近代宪法发展问题"
+        },
+        {
+          "id": "L05-DEV-002",
+          "title": "现代宪法发展中的经济自由、社会权与参政权"
+        }
+      ]
+    },
+    {
+      "lectureId": "L06",
+      "lectureTitle": "第六讲｜宪法的指导思想和基本原则",
+      "knowledgePointCount": 7,
+      "coveredCount": 4,
+      "uncoveredCount": 3,
+      "covered": [
+        {
+          "id": "L06-PRINCIPLE-002",
+          "title": "人民主权与主权概念"
+        },
+        {
+          "id": "L06-PRINCIPLE-005",
+          "title": "尊重和保障人权原则"
+        },
+        {
+          "id": "L06-PRINCIPLE-006",
+          "title": "法治原则"
+        },
+        {
+          "id": "L06-PRINCIPLE-007",
+          "title": "权力监督与制约原则"
+        }
+      ],
+      "uncovered": [
+        {
+          "id": "L06-PRINCIPLE-001",
+          "title": "宪法指导思想与基本原则的课程结构"
+        },
+        {
+          "id": "L06-PRINCIPLE-003",
+          "title": "人民主权思想的发展与比较"
+        },
+        {
+          "id": "L06-PRINCIPLE-004",
+          "title": "人民主权的宪法文本与课件论证"
+        }
+      ]
+    },
+    {
+      "lectureId": "L07",
+      "lectureTitle": "第七讲｜基本权利和义务概述",
+      "knowledgePointCount": 24,
+      "coveredCount": 10,
+      "uncoveredCount": 14,
+      "covered": [
+        {
+          "id": "L07-RIGHTS-001",
+          "title": "权利的概念与法律关系"
+        },
+        {
+          "id": "L07-RIGHTS-002",
+          "title": "道德权利、法律权利与权利理论"
+        },
+        {
+          "id": "L07-RIGHTS-003",
+          "title": "权利与义务关系的动态性"
+        },
+        {
+          "id": "L07-RIGHTS-006",
+          "title": "康德目的王国与人的尊严"
+        },
+        {
+          "id": "L07-TYPES-002",
+          "title": "解释学意义上的基本权利分类"
+        },
+        {
+          "id": "L07-GUARANTEE-001",
+          "title": "基本权利的绝对保障方式"
+        },
+        {
+          "id": "L07-GUARANTEE-002",
+          "title": "基本权利的相对保障与折中保障方式"
+        },
+        {
+          "id": "L07-LIMIT-001",
+          "title": "基本权利限制的类型、主体、目的与方式"
+        },
+        {
+          "id": "L07-LIMIT-002",
+          "title": "基本权利限制的限度与审查"
+        },
+        {
+          "id": "L07-LIMIT-003",
+          "title": "比例原则与巧克力糖果案"
+        }
+      ],
+      "uncovered": [
+        {
+          "id": "L07-RIGHTS-004",
+          "title": "基本权利的概念与人的尊严"
+        },
+        {
+          "id": "L07-RIGHTS-005",
+          "title": "人权存在、普遍性与受教育权材料"
+        },
+        {
+          "id": "L07-RIGHTS-007",
+          "title": "个人自治的含义与条件"
+        },
+        {
+          "id": "L07-RIGHTS-008",
+          "title": "人性尊严、平等与个人责任"
+        },
+        {
+          "id": "L07-RIGHTS-009",
+          "title": "人的尊严案例：击落航空器案"
+        },
+        {
+          "id": "L07-RIGHTS-010",
+          "title": "人的尊严案例：德国终身监禁案"
+        },
+        {
+          "id": "L07-RIGHTS-011",
+          "title": "基本权利的两个面向及我国宪法中的人权"
+        },
+        {
+          "id": "L07-RIGHTS-012",
+          "title": "基本权利的宪法地位"
+        },
+        {
+          "id": "L07-RIGHTS-013",
+          "title": "基本权利的固有性与法定性"
+        },
+        {
+          "id": "L07-RIGHTS-014",
+          "title": "基本权利的不受侵犯性、受制约性与普遍性"
+        },
+        {
+          "id": "L07-RIGHTS-015",
+          "title": "基本权利的享有主体"
+        },
+        {
+          "id": "L07-TYPES-001",
+          "title": "基本权利的学理分类"
+        },
+        {
+          "id": "L07-GUARANTEE-003",
+          "title": "我国的基本权利保障方式"
+        },
+        {
+          "id": "L07-LIMIT-004",
+          "title": "罗伊诉韦德案与多布斯案中的权利冲突材料"
+        }
+      ]
+    }
+  ]
+}
